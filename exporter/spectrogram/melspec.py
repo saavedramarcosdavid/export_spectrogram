@@ -224,10 +224,10 @@ class Melspec:
 		if not title is None:
 			plt.title(title)
 
-		plt.xlabel("Frecuency")
-		plt.ylabel("Time")
+		plt.xlabel("Time")
+		plt.ylabel("Frecuency")
 		if grayscale:
-			plt.imshow(self.spec, cmap="gray")
+			plt.imshow(self.spec.T, cmap="gray")
 		else:
-			plt.imshow(self.spec)
+			plt.imshow(self.spec.T)
 		plt.show()
